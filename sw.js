@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Rachy-Nail's
+// sw.js - Service Worker para BRENDA BEAUTY SALON
 
-const CACHE_NAME = 'rachy-nails-v1';
+const CACHE_NAME = 'brenda-beauty-salon-v1';
 const urlsToCache = [
-  '/rachynails/',
-  '/rachynails/index.html',
-  '/rachynails/admin.html',
-  '/rachynails/admin-login.html',
-  '/rachynails/setup-wizard.html',
-  '/rachynails/editar-negocio.html',
-  '/rachynails/manifest.json',
-  '/rachynails/icons/icon-72x72.png',
-  '/rachynails/icons/icon-96x96.png',
-  '/rachynails/icons/icon-128x128.png',
-  '/rachynails/icons/icon-144x144.png',
-  '/rachynails/icons/icon-152x152.png',
-  '/rachynails/icons/icon-192x192.png',
-  '/rachynails/icons/icon-384x384.png',
-  '/rachynails/icons/icon-512x512.png'
+  '/brendabeautysalon/',
+  '/brendabeautysalon/index.html',
+  '/brendabeautysalon/admin.html',
+  '/brendabeautysalon/admin-login.html',
+  '/brendabeautysalon/setup-wizard.html',
+  '/brendabeautysalon/editar-negocio.html',
+  '/brendabeautysalon/manifest.json',
+  '/brendabeautysalon/icons/icon-72x72.png',
+  '/brendabeautysalon/icons/icon-96x96.png',
+  '/brendabeautysalon/icons/icon-128x128.png',
+  '/brendabeautysalon/icons/icon-144x144.png',
+  '/brendabeautysalon/icons/icon-152x152.png',
+  '/brendabeautysalon/icons/icon-192x192.png',
+  '/brendabeautysalon/icons/icon-384x384.png',
+  '/brendabeautysalon/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/rachynails/icons/icon-192x192.png');
+            return caches.match('/brendabeautysalon/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Rachy-Nail\'s');
+console.log('✅ Service Worker configurado para BRENDA BEAUTY SALON');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

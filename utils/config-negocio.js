@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Rachy-Nail's
+// CLIENTE: BRENDA BEAUTY SALON
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '8a62870f-f423-43e8-89ae-53d4fff01500'; // ID de Rachy-Nail's
+const NEGOCIO_ID_POR_DEFECTO = 'fac842a6-0663-46b6-8fee-121d6160048a'; // ID de BRENDA BEAUTY SALON
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Rachy-Nail\'s';
+    return config?.nombre || 'BRENDA BEAUTY SALON';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '58009563';
+    return config?.telefono || '54419483';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'rachymelissa@gmail.com';
+    return config?.email || 'brenda@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Rachy-Nail\'s!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a BRENDA BEAUTY SALON!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'rachy-nails';
+    return config?.ntfy_topic || 'brenda-beauty-salon';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Rachy-Nail\'s');
+console.log('✅ config-negocio.js listo para BRENDA BEAUTY SALON');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
